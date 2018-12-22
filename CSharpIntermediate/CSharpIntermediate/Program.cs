@@ -10,7 +10,20 @@ namespace CSharpIntermediate
 	{
 		static void Main(string[] args)
 		{
-			Stopwatch.Demo();
+			var post = new Post("První post!", "Tímto postem zahajuji velké postění nás všech :)");
+
+			Console.WriteLine();
+
+			post.Print();
+
+			for (int i = 0; i < 5; i++)
+				post.UpVote();
+			for (int i = 0; i < 3; i++)
+				post.DownVote();
+
+			post.EditDescription();
+			Console.WriteLine("Zeditovaný post:");
+			post.Print();
 		}
 	}
 }
