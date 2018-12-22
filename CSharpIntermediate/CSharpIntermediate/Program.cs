@@ -10,6 +10,7 @@ namespace CSharpIntermediate
 	{
 		static void Main(string[] args)
 		{
+			Stopwatch.Demo();
 		}
 	}
 }
