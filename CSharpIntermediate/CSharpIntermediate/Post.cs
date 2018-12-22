@@ -5,7 +5,7 @@ namespace CSharpIntermediate
 	public class Post
 	{
 		public string Title { get; set; }
-		public string Description { get; set; }
+		public string Description { get; private set; }
 		public DateTime WhenCreated { get; private set; }
 		public int Votes { get; private set; }
 
