@@ -39,8 +39,26 @@ namespace CSharpIntermediate
 		{
 			Console.WriteLine(Title);
 			Console.WriteLine(Description);
-			Console.WriteLine("Posted " + WhenCreated.ToString("yyyy/MM/dd HH:mm:ss"));
+			Console.WriteLine("Posted " + WhenCreated.ToString("dd.MM.yyyy HH:mm:ss"));
 			Console.WriteLine("Votes: " + Votes);
+		}
+
+		public void Demo()
+		{
+			var post = new Post("První post!", "Tímto postem zahajuji velké postění nás všech :)");
+
+			Console.WriteLine();
+
+			post.Print();
+
+			for (int i = 0; i < 5; i++)
+				post.UpVote();
+			for (int i = 0; i < 3; i++)
+				post.DownVote();
+
+			post.EditDescription();
+			Console.WriteLine("Zeditovaný post:");
+			post.Print();
 		}
 	}
 }
