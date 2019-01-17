@@ -1,7 +1,11 @@
-﻿namespace WorkflowEngine
+﻿using System.Collections.Generic;
+
+namespace WorkflowEngine
 {
 	public interface IWorkflow
 	{
-		void Execute();
+		void AddTask(ITask task);
+		void RemoveTask(ITask task);
+		IList<ITask> GetWorkflow();
 	}
 }

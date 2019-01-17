@@ -1,28 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace WorkflowEngine
 {
 	public class WorkflowEngine
 	{
-		private readonly IList<IWorkflow> _workflows;
-
-		public WorkflowEngine()
+		public void Run(IWorkflow workflow)
 		{
-			this._workflows = new List<IWorkflow>();
-		}
-
-		public void Run()
-		{
-			foreach (var workflow in _workflows)
+			foreach (var task in workflow.GetWorkflow())
 			{
-				workflow.Execute();
+				task.Execute();
 			}
-		}
-
-		public void RegisterWorkflow(IWorkflow workflow)
-		{
-			_workflows.Add(workflow);
 		}
 	}
 }

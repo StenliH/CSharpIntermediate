@@ -9,13 +9,15 @@ namespace WorkflowEngine
 	{
 		static void Main(string[] args)
 		{
-			var engine = new WorkflowEngine();
-			engine.RegisterWorkflow(new UploadVideo());
-			engine.RegisterWorkflow(new EncodeVideo());
-			engine.RegisterWorkflow(new MailNotification());
-			engine.RegisterWorkflow(new ChangeVideoStatus());
+			var workflow = new Workflow();
+			workflow.AddTask(new TaskUploadVideo());
+			workflow.AddTask(new TaskEncodeVideo());
+			workflow.AddTask(new TaskChangeVideoStatus());
+			workflow.AddTask(new TaskMailNotification());
 
-			engine.Run();
+			var workflowEngine = new WorkflowEngine();
+
+			workflowEngine.Run(workflow);
 
 		}
 	}

@@ -2,7 +2,7 @@
 
 namespace WorkflowEngine
 {
-	public class MailNotification : IWorkflow
+	public class TaskMailNotification : ITask
 	{
 		public void Execute()
 		{

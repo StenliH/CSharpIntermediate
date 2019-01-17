@@ -43,13 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChangeVideoStatus.cs" />
-    <Compile Include="EncodeVideo.cs" />
+    <Compile Include="ITask.cs" />
     <Compile Include="IWorkflow.cs" />
-    <Compile Include="MailNotification.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UploadVideo.cs" />
+    <Compile Include="TaskChangeVideoStatus.cs" />
+    <Compile Include="TaskEncodeVideo.cs" />
+    <Compile Include="TaskMailNotification.cs" />
+    <Compile Include="TaskUploadVideo.cs" />
+    <Compile Include="Workflow.cs" />
     <Compile Include="WorkflowEngine.cs" />
   </ItemGroup>
   <ItemGroup>

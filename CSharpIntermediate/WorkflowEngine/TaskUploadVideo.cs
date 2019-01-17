@@ -2,7 +2,7 @@
 
 namespace WorkflowEngine
 {
-	public class UploadVideo : IWorkflow
+	public class TaskUploadVideo : ITask
 	{
 		public void Execute()
 		{

@@ -2,7 +2,7 @@
 
 namespace WorkflowEngine
 {
-	public class ChangeVideoStatus : IWorkflow
+	public class TaskChangeVideoStatus : ITask
 	{
 		public void Execute()
 		{
